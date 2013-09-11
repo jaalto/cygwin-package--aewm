@@ -1,0 +1,6 @@
+sdesc: "A minimal window manager for X11, based on aewm"
+ldesc: "Window manager with aewm's minimalist look and feel but is written in
+C++, and adds some modern features like virtual desktops and partial
+GNOME support."
+category: X11
+requires: cygwin xorg-x11-base xorg-x11-bin-dlls

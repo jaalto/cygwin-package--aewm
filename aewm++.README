@@ -1,0 +1,77 @@
+aewm++
+------------------------------------------
+A minimal window manager for X11, based on aewm
+
+Window manager with aewm's minimalist look and feel but is written in
+C++, and adds some modern features like virtual desktops and partial
+GNOME support.
+
+Runtime requirements:
+  cygwin
+  xorg-x11-base
+  xorg-x11-bin-dlls
+
+Build requirements:
+  cygwin
+  xorg-x11-base
+  xorg-x11-bin-dlls
+  xorg-x11-devel
+
+Canonical homepage:
+  http://sourceforge.net/projects/sapphire
+  http://packages.debian.org/aewm++
+
+Canonical download:
+  See above
+
+Mailing list:
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  Author: Frank Hale <frankhale@gmail.com>
+  Bugs: http://sourceforge.net/tracker/?atid=101077&group_id=1077&func=browse
+
+License:
+  GPL
+
+Language:
+  C
+
+------------------------------------
+
+Build instructions:
+  unpack aewm++-1.1.2-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./aewm++*.sh all
+
+This will create:
+  aewm++-1.1.2-1.tar.bz2
+  aewm++-1.1.2-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+usr/bin/aewm++.exe
+usr/share/doc/Cygwin/aewm++-1.1.2.README
+usr/share/doc/aewm++-1.1.2/ChangeLog
+usr/share/doc/aewm++-1.1.2/LICENSE
+usr/share/doc/aewm++-1.1.2/README
+
+------------------
+
+Port Notes:
+- This port is based on Debian package
+- windowmanager.cc, Makefile: applied Debian diff.
+- aewm++.1x: No manual. Copied from Debian.
+
+----- version 1.1.2-1 -----
+- Initial release 2007-09-19 Jari Aalto
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later

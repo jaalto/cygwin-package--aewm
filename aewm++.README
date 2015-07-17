@@ -7,15 +7,15 @@ C++, and adds some modern features like virtual desktops and partial
 GNOME support.
 
 Runtime requirements:
-  cygwin
-  xorg-x11-base
-  xorg-x11-bin-dlls
+  libX11_6
+  libXext6
+  libstdc++6
 
 Build requirements:
-  cygwin
-  xorg-x11-base
-  xorg-x11-bin-dlls
-  xorg-x11-devel
+  quilt
+  cygwin32-libX11
+  libXext-devel
+  g++
 
 Canonical homepage:
   http://sourceforge.net/projects/sapphire
@@ -38,40 +38,38 @@ License:
   GPL
 
 Language:
-  C
+  C++
 
 ------------------------------------
 
 Build instructions:
-  unpack aewm++-1.1.2-1-src.tar.bz2
+  unpack aewm++-1.1.2-2-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./aewm++*.sh all
 
 This will create:
-  aewm++-1.1.2-1.tar.bz2
-  aewm++-1.1.2-1-src.tar.bz2
+  aewm++-1.1.2-2.tar.xz
+  aewm++-1.1.2-2-src.tar.xz
 
 -------------------------------------------
 
 Files included in the binary distro:
-
-usr/bin/aewm++.exe
-usr/share/doc/Cygwin/aewm++-1.1.2.README
-usr/share/doc/aewm++-1.1.2/ChangeLog
-usr/share/doc/aewm++-1.1.2/LICENSE
-usr/share/doc/aewm++-1.1.2/README
+  See Cygwin package archive
 
 ------------------
 
 Port Notes:
 - This port is based on Debian package
-- windowmanager.cc, Makefile: applied Debian diff.
-- aewm++.1x: No manual. Copied from Debian.
+- aewm++.1: No manual. Copied from Debian.
+
+----- version 1.1.2-2 -----
+- New release 2015-07-17 Jari Aalto
+- Port to x64 and move to quilt patch management
 
 ----- version 1.1.2-1 -----
 - Initial release 2007-09-19 Jari Aalto
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2015 Jari Aalto; Licenced under GPL v2 or later

@@ -1,0 +1,27 @@
+---
+ Makefile |    8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+--- a/Makefile
++++ b/Makefile
+@@ -1,5 +1,5 @@
+-CC       = g++
+-ADDITIONAL_CFLAGS   = -g -O2 -march=i686 -Wall
++CXX       = g++
++ADDITIONAL_CFLAGS   = -g -O2 -Wall
+ 
+ prefix   = /usr
+ INCLUDES = -I$/usr/X11R6
+@@ -28,10 +28,10 @@ OBJS     = windowmanager.o 	\
+ all: aewm++
+ 
+ aewm++: $(OBJS)
+-	$(CC) $(OBJS) $(LDPATH) $(LIBS) -o $@
++	$(CXX) $(OBJS) $(LDPATH) $(LIBS) -o $@
+ 
+ $(OBJS): %.o: %.cc $(HEADERS)
+-	$(CC) $(CFLAGS) $(ADDITIONAL_CFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
++	$(CXX) $(CFLAGS) $(ADDITIONAL_CFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
+ 
+ install: all
+ 	mkdir -p $(DESTDIR)$(prefix)/bin

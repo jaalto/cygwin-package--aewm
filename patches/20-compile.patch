@@ -1,0 +1,57 @@
+---
+ aewm.hh          |    2 ++
+ client.cc        |    1 +
+ main.cc          |    1 +
+ windowmanager.cc |    3 ++-
+ 4 files changed, 6 insertions(+), 1 deletion(-)
+
+--- a/windowmanager.cc
++++ b/windowmanager.cc
+@@ -5,6 +5,7 @@
+  * This code is released under the GPL license www.gnu.org
+  */
+ #include "aewm.hh"
++#include <string.h>
+ 
+ WindowManager* wm;
+ 
+@@ -540,7 +541,7 @@ void WindowManager::handleKeyPressEvent(
+  	{
+                 if( (unsigned)current_desktop != ks - XK_1 )
+ 		{
+-			(unsigned)current_desktop = ks - XK_1;
++			current_desktop = ks - XK_1;
+ 			goToDesktop(current_desktop);
+ 		}
+ 	}
+--- a/client.cc
++++ b/client.cc
+@@ -5,6 +5,7 @@
+  * This code is released under the GPL license www.gnu.org
+  */
+ #include "aewm.hh"
++#include <string.h>
+ 
+ Client::Client(Display *d, Window new_client)
+ {
+--- a/aewm.hh
++++ b/aewm.hh
+@@ -4,6 +4,8 @@
+  *
+  * This code is released under the GPL license www.gnu.org
+  */
++#include <string.h>
++
+ #ifndef _AEWM_HH_
+ #define _AEWM_HH_
+ 
+--- a/main.cc
++++ b/main.cc
+@@ -5,6 +5,7 @@
+  * This code is released under the GPL license www.gnu.org
+  */
+  #include "aewm.hh"
++#include <string.h>
+ 
+ // Dunno where I ripped this from. Kudos to the author whoever he is!
+ void forkExec(char *cmd)

@@ -1,6 +1,6 @@
 ---
- Makefile |    8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
+ Makefile |   10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
 
 --- a/Makefile
 +++ b/Makefile
@@ -12,7 +12,7 @@
  
  prefix   = /usr
  INCLUDES = -I$/usr/X11R6
-@@ -28,10 +28,10 @@ OBJS     = windowmanager.o 	\
+@@ -28,14 +28,14 @@ OBJS     = windowmanager.o 	\
  all: aewm++
  
  aewm++: $(OBJS)
@@ -25,3 +25,8 @@
  
  install: all
  	mkdir -p $(DESTDIR)$(prefix)/bin
+-	mkdir -p $(DESTDIR)$(prefix)/man/man1
++	# mkdir -p $(DESTDIR)$(prefix)/man/man1
+ 	install -s aewm++ $(DESTDIR)$(prefix)/bin
+ 	
+ clean:
